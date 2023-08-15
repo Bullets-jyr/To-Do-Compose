@@ -30,9 +30,9 @@ fun NavGraphBuilder.taskComposable(
         val selectedTask by sharedViewModel.selectedTask.collectAsState()
 
         LaunchedEffect(key1 = taskId) {
-            if (selectedTask != null || taskId == -1) {
+//            if (selectedTask != null || taskId == -1) {
                 sharedViewModel.updateTaskFields(selectedTask = selectedTask)
-            }
+//            }
         }
 
         TaskScreen(

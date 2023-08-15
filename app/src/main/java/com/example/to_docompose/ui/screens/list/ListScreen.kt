@@ -32,6 +32,7 @@ fun ListScreen(
 //    for (task in allTasks.value) {
 //        Log.d("ListScreen", task.title)
 //    }
+    val searchedTasks by sharedViewModel.searchedTasks.collectAsState()
     val searchAppBarState: SearchAppBarState by sharedViewModel.searchAppBarState
     val searchTextState: String by sharedViewModel.searchTextState
 
@@ -58,8 +59,14 @@ fun ListScreen(
             )
         },
         content = {
+//            ListContent(
+//                tasks = allTasks,
+//                navigateToTaskScreen = navigateToTaskScreen
+//            )
             ListContent(
-                tasks = allTasks,
+                allTasks = allTasks,
+                searchedTasks = searchedTasks,
+                searchAppBarState = searchAppBarState,
                 navigateToTaskScreen = navigateToTaskScreen
             )
         },

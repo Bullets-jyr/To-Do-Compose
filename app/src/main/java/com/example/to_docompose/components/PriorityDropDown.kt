@@ -38,13 +38,13 @@ fun PriorityDropDown(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-//            .background(MaterialTheme.colors.background)
+            .background(MaterialTheme.colors.background)
             .height(PRIORITY_DROP_DOWN_HEIGHT)
             .clickable { expanded = true }
             .border(
                 width = 1.dp,
                 color = MaterialTheme.colors.onSurface.copy(alpha = ContentAlpha.disabled),
-//                shape = MaterialTheme.shapes.small
+                shape = MaterialTheme.shapes.small
             ),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -76,8 +76,8 @@ fun PriorityDropDown(
         }
         DropdownMenu(
             modifier = Modifier
-                .fillMaxWidth(),
-//                .fillMaxWidth(fraction = 0.94f),
+//                .fillMaxWidth(),
+                .fillMaxWidth(fraction = 0.94f),
             expanded = expanded,
             onDismissRequest = { expanded = false }
         ) {
@@ -108,7 +108,6 @@ fun PriorityDropDown(
         }
     }
 }
-
 
 @Composable
 @Preview

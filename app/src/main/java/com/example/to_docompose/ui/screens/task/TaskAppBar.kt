@@ -147,7 +147,6 @@ fun UpdateAction(
     }
 }
 
-
 @Composable
 @Preview
 private fun NewTaskAppBarPreview() {

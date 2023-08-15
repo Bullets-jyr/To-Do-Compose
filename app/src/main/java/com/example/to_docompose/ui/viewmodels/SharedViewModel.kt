@@ -113,7 +113,7 @@ class SharedViewModel @Inject constructor(private val repository: ToDoRepository
 //                deleteAllTasks()
             }
             Action.UNDO -> {
-//                addTask()
+                addTask()
             }
             else -> {
 

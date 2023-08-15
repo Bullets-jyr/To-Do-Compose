@@ -2,12 +2,13 @@ package com.example.to_docompose.ui.screens.task
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
+import com.example.to_docompose.util.Action
 
 @Composable
 fun TaskScreen(
 //    selectedTask: ToDoTask?,
 //    sharedViewModel: SharedViewModel,
-//    navigateToListScreen: (Action) -> Unit
+    navigateToListScreen: (Action) -> Unit
 ) {
 //    val title: String by sharedViewModel.title
 //    val description: String by sharedViewModel.description
@@ -17,6 +18,7 @@ fun TaskScreen(
 
     Scaffold(
         topBar = {
+            TaskAppBar(navigateToListScreen = navigateToListScreen)
 //            TaskAppBar(
 //                selectedTask = selectedTask,
 //                navigateToListScreen = { action ->

@@ -19,17 +19,17 @@ import com.example.to_docompose.util.Action
 
 @Composable
 fun TaskAppBar(
-//    selectedTask: ToDoTask?,
+    selectedTask: ToDoTask?,
     navigateToListScreen: (Action) -> Unit
 ) {
-//    if (selectedTask == null) {
+    if (selectedTask == null) {
         NewTaskAppBar(navigateToListScreen = navigateToListScreen)
-//    } else {
-//        ExistingTaskAppBar(
-//            selectedTask = selectedTask,
-//            navigateToListScreen = navigateToListScreen
-//        )
-//    }
+    } else {
+        ExistingTaskAppBar(
+            selectedTask = selectedTask,
+            navigateToListScreen = navigateToListScreen
+        )
+    }
 }
 
 @Composable

@@ -18,16 +18,17 @@ import com.example.to_docompose.R
 import com.example.to_docompose.ui.theme.LOGO_HEIGHT
 import com.example.to_docompose.ui.theme.ToDoComposeTheme
 import com.example.to_docompose.ui.theme.splashScreenBackground
+import com.example.to_docompose.util.Constants.SPLASH_SCREEN_DELAY
 import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(
-//    navigateToListScreen: () -> Unit
+    navigateToListScreen: () -> Unit
 ) {
-//    LaunchedEffect(key1 = true){
-//        delay(SPLASH_SCREEN_DELAY)
-//        navigateToListScreen()
-//    }
+    LaunchedEffect(key1 = true){
+        delay(SPLASH_SCREEN_DELAY)
+        navigateToListScreen()
+    }
 
     Box(
         modifier = Modifier
@@ -57,7 +58,7 @@ fun getLogo(): Int {
 @Preview
 private fun SplashScreenPreview() {
     SplashScreen(
-//        navigateToListScreen = {}
+        navigateToListScreen = {}
     )
 }
 
